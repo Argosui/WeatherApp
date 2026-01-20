@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=~, initial-scale=1.0" />
+    <title>AppClima</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+    </style>
+  </head>
+  <body>
+    <nav>
+      <span class="logo icono"><ion-icon name="map"></ion-icon></span>
+      <h2 class="nombre">AppClima</h2>
+      <ul class="opciones">
+        <li>Dashboard</li>
+        <li>Forecast</li>
+        <li>Saved</li>
+      </ul>
+
+      <div class="search-bar">
+        <ion-icon name="search-outline"></ion-icon>
+        <input type="text" id="location" placeholder="Buscar ciudad.." />
+      </div>
+    </nav>
+    <!-- <template class="dashboard"> -->
+
+    <section class="dashboard-container">
+      <div class="forecast card">
+        <article class="city">
+          <div class="city__name">
+            <span class="icono"
+              ><ion-icon name="location-sharp"></ion-icon
+            ></span>
+            <h2 class="name" id="city-name">San Francisco, CA</h2>
+          </div>
+
+          <p class="date">Martes, Enero 1st</p>
+
+          <span class="temp" id="city-temp"> 72º </span>
+
+          <div class="city__weather">
+            <h2 class="sky" id="weather-sky">Sunny</h2>
+            <span class="separation"></span>
+            <p class="feeling">
+              Feels like <span id="weather-feeling">30</span>º
+            </p>
+          </div>
+
+          <div class="city__coordinates">
+            <p>H: <span id="height">78</span>º</p>
+            <p>L: <span id="latitude">65</span>º</p>
+          </div>
+        </article>
+        <aside class="visual ">
+          <div class="sun"></div>
+          <span class="uv card">
+              <span class="warning "><ion-icon name="warning"></ion-icon></span>
+              <span id="uv-text ">High UV</span>
+          </span>
+        </aside>
+      </div>
+      <aside class="info">
+        <article class="map"></article>
+        <div class="info-weather">
+          <article class="card"></article>
+          <article class="card"></article>
+          <article class="card"></article>
+          <article class="card"></article>
+        </div>
+      </aside>
+    </section>
+
+    <!-- </template> -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,1 +1,197 @@
-/*# sourceMappingURL=style.css.map */
+:root {
+  --nav: #11161d;
+  --background: #101b26;
+  --primary: #137fec;
+  --secondary: #94a3b8;
+  --card: #1a2430;
+  --text: #e5e7eb;
+}
+
+.card {
+  background-color: var(--card);
+  border-radius: 16px;
+  border: 1px solid #26313c;
+}
+
+.icono {
+  color: #137fec;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  text-decoration: none;
+  font-family: "Space Grotesk", "Roboto", sans-serif;
+  color: white;
+  background-color: var(--background);
+}
+body nav {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--nav);
+  height: 64px;
+  padding: 24px;
+  gap: 10px;
+}
+body nav .search-bar {
+  height: 40px;
+  width: 223px;
+  margin-left: auto;
+  padding: 15px 10px;
+  gap: 5px;
+  background-color: #1a1f27;
+  border: 1px solid #262a32;
+  border-radius: 12px;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+}
+body nav .search-bar #location {
+  background-color: #1a1f27;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: var(--secondary);
+}
+body nav .logo {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+}
+body nav ul {
+  display: flex;
+  flex-direction: row;
+  color: var(--secondary);
+  gap: 24px;
+  font-size: 14px;
+}
+body nav ul li {
+  cursor: pointer;
+}
+body nav .nombre {
+  margin-right: 10px;
+}
+body .dashboard-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  flex-direction: row;
+}
+body .dashboard-container .forecast {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  width: 909px;
+  justify-content: space-between;
+}
+body .dashboard-container .forecast .city__name {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+body .dashboard-container .forecast .city__name .name {
+  font-size: 36px;
+}
+body .dashboard-container .forecast .city .date {
+  font-size: 16px;
+  color: var(--secondary);
+}
+body .dashboard-container .forecast .city .temp {
+  background: linear-gradient(to bottom, #fff, #a7b3c4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 110px;
+  font-weight: 800;
+}
+body .dashboard-container .forecast .city__weather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+body .dashboard-container .forecast .city__weather .sky {
+  color: var(--primary);
+}
+body .dashboard-container .forecast .city__weather .separation {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+}
+body .dashboard-container .forecast .city__weather .feeling {
+  color: var(--secondary);
+}
+body .dashboard-container .forecast .city__coordinates {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  color: var(--secondary);
+  font-size: 14px;
+}
+body .dashboard-container .forecast .visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .dashboard-container .forecast .visual .sun {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #FB923C;
+  margin-right: 30px;
+  opacity: 0.6;
+}
+body .dashboard-container .forecast .visual .sun::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 90%;
+  transform: translateX(13%);
+  background: radial-gradient(circle, #FFC90E, transparent 60%);
+}
+body .dashboard-container .forecast .visual .sun::before {
+  height: 150%;
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 150%;
+  transform: translate(-38px, -38px);
+  z-index: 0;
+  background: radial-gradient(circle, #FFC90E, transparent 60%);
+}
+body .dashboard-container .forecast .visual .uv {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  gap: 3px;
+  bottom: 0;
+  right: 0;
+  padding: 5px 10px;
+  transform: translateY(-80%);
+}
+body .dashboard-container .forecast .visual .uv .warning {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */
