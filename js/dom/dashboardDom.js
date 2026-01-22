@@ -6,7 +6,7 @@ export const dashboardDom  = () => ({
      weatherSky : document.getElementById("weather-sky"),
      weatherFeeling : document.getElementById("weather-feeling"),
      cityHeight : document.getElementById("height"),
-     Citylatitude : document.getElementById("latitude"),
+     cityLatitude : document.getElementById("latitude"),
      uvText : document.getElementById("uv-text"),
      hoursContainer : document.getElementById("hoursContainer"),
      airNumber : document.getElementById("air-number"),

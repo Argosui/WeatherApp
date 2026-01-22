@@ -7,24 +7,24 @@ export const dashboardTemplate = `
               <span class="icono"
                 ><ion-icon name="location-sharp"></ion-icon
               ></span>
-              <h2 class="name" id="city-name">San Francisco, CA</h2>
+              <h2 class="name" id="city-name">Cargando...</h2>
             </div>
 
-            <p class="date" id="date">Martes, Enero 1st</p>
+            <p class="date" id="date">Jueves, Enero 22</p>
 
-            <span class="temp" id="city-temp"> 72º </span>
+            <span class="temp" id="city-temp"> -- </span>
 
             <div class="city__weather">
-              <h2 class="sky" id="weather-sky">Sunny</h2>
+              <h2 class="sky" id="weather-sky">---</h2>
               <span class="separation"></span>
               <p class="feeling">
-                Sensacion termica de <span id="weather-feeling">30</span>º
+                Sensacion termica de <span id="weather-feeling">--</span>º
               </p>
             </div>
 
             <div class="city__coordinates">
-              <p>H: <span id="height">78</span>º</p>
-              <p>L: <span id="latitude">65</span>º</p>
+              <p>H: <span id="height">--</span>º</p>
+              <p>L: <span id="latitude">--</span>º</p>
             </div>
           </article>
           <aside class="visual">
