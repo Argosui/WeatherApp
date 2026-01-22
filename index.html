@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=~, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AppClima</title>
     <link rel="stylesheet" href="style/style.css" />
     <style>
@@ -18,149 +18,22 @@
       <span class="logo icono"><ion-icon name="map"></ion-icon></span>
       <h2 class="nombre">AppClima</h2>
       <ul class="opciones">
-        <li id="dasboard" class="active">Dashboard</li>
+        <li id="dashboard" class="active">Dashboard</li>
         <li id="pronostico">Pronostico</li>
         <li id="guardados">Guardados</li>
       </ul>
 
       <div class="search-bar">
+
         <ion-icon name="search-outline"></ion-icon>
         <input type="text" id="location" placeholder="Buscar ciudad.." />
+
       </div>
     </nav>
+
     <main class="container">
-      <section class="dashboard-container">
-        <div class="forecast card">
-          <article class="city">
-            <div class="city__name">
-              <span class="icono"
-                ><ion-icon name="location-sharp"></ion-icon
-              ></span>
-              <h2 class="name" id="city-name">San Francisco, CA</h2>
-            </div>
 
-            <p class="date">Martes, Enero 1st</p>
-
-            <span class="temp" id="city-temp"> 72º </span>
-
-            <div class="city__weather">
-              <h2 class="sky" id="weather-sky">Sunny</h2>
-              <span class="separation"></span>
-              <p class="feeling">
-                Feels like <span id="weather-feeling">30</span>º
-              </p>
-            </div>
-
-            <div class="city__coordinates">
-              <p>H: <span id="height">78</span>º</p>
-              <p>L: <span id="latitude">65</span>º</p>
-            </div>
-          </article>
-          <aside class="visual">
-            <div class="sun"></div>
-            <span class="uv card">
-              <span class="warning"><ion-icon name="warning"></ion-icon></span>
-              <span id="uv-text ">High UV</span>
-            </span>
-          </aside>
-        </div>
-        <article class="hourly card">
-          <h2 class="title">Hourly Forecast</h2>
-          <div class="hours-container">
-            <div class="hours">
-              <p class="hour" id="moment">Now</p>
-              <span id="icon"><ion-icon name="sunny-sharp"></ion-icon></span>
-              <p class="degrees" id="hours-temp">32º</p>
-            </div>
-            <div class="hours"></div>
-            <div class="hours"></div>
-            <div class="hours"></div>
-            <div class="hours"></div>
-            <div class="hours"></div>
-            <div class="hours"></div>
-            <div class="hours"></div>
-          </div>
-        </article>
-      </section>
-
-      <aside class="info">
-        <article class="map"></article>
-        <div class="info-weather">
-          <div class="info-container">
-            <article class="winfo card">
-              <span class="inline">
-                <span class="material-symbols-outlined secondary"> air </span>
-                <p class="secondary">Calidad del aire</p>
-              </span>
-
-              <div class="weather-data">
-                <p class="data-number" id="air-number">32</p>
-                <span class="value"> Good</span>
-              </div>
-
-              <div class="bar-container">
-                <div class="bar" id="air-bar"></div>
-              </div>
-
-            </article>
-
-            <article class="winfo card">
-              <span class="inline">
-                <span class="material-symbols-outlined secondary">
-                  brightness_empty
-                </span>
-                <p class="secondary">Rayos UV</p>
-              </span>
-
-              <div class="weather-data">
-                <p class="data-number" id="UV-number">6</p>
-                <span class="value"> Good</span>
-              </div>
-
-              <div class="bar-container">
-                <div class="bar" id="air-bar"></div>
-              </div>
-
-            </article>
-          </div>
-
-          <div class="info-container">
-            <article class="winfo card">
-              <span class="inline">
-                <span class="material-symbols-outlined secondary">
-                  humidity_percentage
-                </span>
-                <p class="secondary">Humedad</p>
-              </span>
-
-              <div class="weather-data">
-                <p class="data-number" id="humidity-number">6</p>
-                <p class="small secondary">Punto de rocio</p>
-              </div>
-
-              <div class="bar-container">
-                <div class="blue" id="air-bar"></div>
-              </div>
-
-            </article>
-
-            <article class="winfo card">
-              <span class="inline">
-                <span class="material-symbols-outlined secondary">
-                  visibility
-                </span>
-                <p class="secondary">Visibilidad</p>
-              </span>
-
-              <div class="weather-data">
-                <p class="data-number" id="humidity-number">10 KM</p>
-                <p class="small secondary">Perfectamente claro</p>
-              </div>
-
-            </article>
-          </div>
-        </div>
-      </aside>
+      
     </main>
 
     <script
@@ -171,5 +44,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
