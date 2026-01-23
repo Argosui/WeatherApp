@@ -37,10 +37,12 @@ export const dashboardTemplate = `
         </div>
         <article class="hourly card">
           <h2 class="title">Hourly Forecast</h2>
-          <div class="hours-container">
+          <div class="hours-container" id="hours-container">
             <div class="hours">
               <p class="hour" id="moment">Now</p>
-              <span id="icon"><ion-icon name="sunny-sharp"></ion-icon></span>
+              <span class="material-symbols-outlined fill icon">
+              sunny
+              </span>
               <p class="degrees" id="hours-temp">32º</p>
             </div>
             <div class="hours"></div>
@@ -131,4 +133,4 @@ export const dashboardTemplate = `
             </article>
           </div>
         </div>
-      </aside>`
+      </aside>`;

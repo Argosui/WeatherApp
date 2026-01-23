@@ -8,7 +8,7 @@ export const dashboardDom  = () => ({
      cityHeight : document.getElementById("height"),
      cityLatitude : document.getElementById("latitude"),
      uvText : document.getElementById("uv-text"),
-     hoursContainer : document.getElementById("hoursContainer"),
+     hoursContainer : document.getElementById("hours-container"),
      airNumber : document.getElementById("air-number"),
      airValue : document.getElementById("air-value"),
      airBar : document.getElementById("air-bar"),
