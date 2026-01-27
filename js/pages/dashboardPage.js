@@ -17,17 +17,54 @@ export async function loadDashboard(city) {
   const forecast = await fetchAPI(urlForecast);
 
   if (data && forecast) {
-    loadInfo(dom, forecast, data);
+    await loadInfo(dom, forecast, data);
   }
 }
 
-function loadInfo(dom, forecast, data) {
+async function loadInfo(dom, forecast, data) {
   dom.cityName.textContent = `${data.name}, ${data.sys.country}`;
   dom.cityTemp.textContent = `${Math.round(data.main.temp)}º`;
   dom.weatherSky.textContent = data.weather[0].description;
   dom.weatherFeeling.textContent = `${Math.round(data.main.feels_like)}`;
   dom.cityHeight.textContent = `${Math.round(data.coord.lon)}`;
   dom.cityLatitude.textContent = `${Math.round(data.coord.lat)}`;
+
+  const lat = data.coord.lat;
+  const lon = data.coord.lon;
+
+  const airUrl = `${API_CONFIG.air.baseUrl}?lat=${lat}&lon=${lon}&appid=${API_CONFIG.air.key}`;
+  const airData = await fetchAPI(airUrl);
+
+
+
+  if (airData?.list?.length) {
+    const aqi = airData.list[0].main.aqi;
+    dom.airNumber.textContent = aqi;
+    dom.airBar.style.width = aqi * 20 + "%";
+    if (aqi == 1){
+        dom.airValue.textContent = "Excelente";
+    } else if (aqi == 2){
+        dom.airValue.textContent = "Buena";
+    } else if (aqi == 3){
+        dom.airValue.textContent = "Regular";
+        dom.airValue.style.color = "#f0f05b";
+        dom.airValue.style.background ="#4d4d3b";
+    } else if (aqi == 4){
+        dom.airValue.textContent = "Mala";
+        dom.airValue.style.color = "#db7725";
+        dom.airValue.style.background ="#4d433b";
+    } else if (aqi == 2){
+        dom.airValue.textContent = "Muy mala";
+        dom.airValue.style.color = "#db2525";
+        dom.airValue.style.background ="#4d2f2f";
+    }
+
+  } else {
+    dom.airNumber.textContent = "—";
+    dom.airBar.style.width = "0%";
+  }
+
+  
 
   const humidity = data.main.humidity;
 

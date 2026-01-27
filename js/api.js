@@ -10,7 +10,18 @@ export const API_CONFIG = {
     key: "e32598b9b6603519918abc5842ae9410",
     units: "metric",
     lang: "es"
+  },
+  air: {
+    baseUrl: "https://api.openweathermap.org/data/2.5/air_pollution",
+    key: "e32598b9b6603519918abc5842ae9410",
+  },
+  uv: {
+    baseUrl: "https://api.openweathermap.org/data/3.0/onecall",
+    key: "e32598b9b6603519918abc5842ae9410",
+    units: "metric",
+    lang: "es"
   }
+
 };
 
 export async function fetchAPI(url) {
